@@ -1,0 +1,16 @@
+/* SocialLinks.module.css */
+.socialLinksContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.socialLink {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #2c3e50; /* Azul oscuro */
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #3498db; /* Azul más claro al pasar el ratón */
+  }
+}

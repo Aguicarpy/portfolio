@@ -185,3 +185,27 @@ button {
 button:hover {
   background-color: #34495e;
 }
+
+
+.parallaxContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.parallaxBackground {
+  background-image: url('./assets/parallaxback.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%); /* Ajusta la luminosidad según sea necesario */
+}
+
+/* Estilo de las secciones */
+.parallaxSection {
+  padding: 50px 0; /* Agrega espacio alrededor de las secciones */
+  text-align: center;
+  color: #fff;
+}
