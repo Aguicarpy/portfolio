@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <motion.div
       className={styles.headerContainer}
-      initial="hidden"
+      initial='hidden'
       animate="visible"
       variants={headerVariants}
       transition={{ duration: 1, delay: 0.5 }}
