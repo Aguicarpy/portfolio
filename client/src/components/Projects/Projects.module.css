@@ -1,0 +1,57 @@
+/* Projects.module.css */
+
+.projectsContainer {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.projectsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px; 
+}
+  
+.project {
+    width: calc(47% - 20px);
+    margin: 10px; 
+    background-color: #f0f5f9; 
+    color: #2c3e50; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+  
+.project:hover {
+    transform: scale(1.05);
+}
+  
+.mediaContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+  
+.mediaContent {
+    width: 100%;
+    border-radius: 10px;
+}
+  
+.repoLink {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #2c3e50; 
+    transition: color 0.3s ease-in-out;
+}
+  
+.repoLink:hover {
+    color: #3498db;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+  
