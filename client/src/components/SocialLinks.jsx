@@ -4,17 +4,17 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const SocialLinksContainer = styled.div`
   text-align: center;
-  margin-top: 20px;
+  margin-top: 200px; /* Ajusté el margen superior */
 `;
 
 const SocialLink = styled.a`
-  margin: 0 10px;
-  font-size: 24px;
-  color: #2c3e50; /* Azul oscuro */
+  margin: 0 15px;
+  font-size: 32px;
+  color: #2c3e50;
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #3498db; /* Azul más claro al pasar el ratón */
+    color: #3498db;
   }
 `;
 
