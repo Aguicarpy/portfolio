@@ -1,40 +1,58 @@
 /* Skills.module.css */
+
 .skillsContainer {
     padding: 40px;
-    background-color: #ecf0f1;
-    color: #b3b3b3;
+    background-color: #f2f2f2;
+    color: #2c3e50;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   
   .skillGrid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 30px;
   }
   
   .skillItem {
+    position: relative;
+    overflow: hidden;
     padding: 20px;
-    background-color: #1d242b8c;
+    background-color: #f0f5f9;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
   
-    &:hover {
-      transform: scale(1.1);
-    }
+  .skillItem::before {
+    content: '';
+    position: absolute;
+    top: -100px; /* Ajusta según tu preferencia */
+    left: -100px; /* Ajusta según tu preferencia */
+    right: -100px; /* Ajusta según tu preferencia */
+    bottom: -100px; /* Ajusta según tu preferencia */
+    background: radial-gradient(circle, #3498db 0%, rgba(52, 152, 219, 0) 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .skillItem:hover::before {
+    opacity: 1;
+  }
+  
+  .skillItem:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajusta según tu preferencia */
   }
   
   .skillImage {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    width: 100px;
+    height: 100px;
+    transition: filter 0.3s ease-in-out;
   }
   
+  .skillItem:hover .skillImage {
+    filter: brightness(1.5); /* Ajusta el valor según tu preferencia */
+  }

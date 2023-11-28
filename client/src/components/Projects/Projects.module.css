@@ -1,56 +1,57 @@
+/* Projects.module.css */
+
 .projectsContainer {
-  padding: 80px 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: #ecf0f1;
-  color: #333;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
+  
 .projectsList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px; 
 }
-
-h3{
-  color: #000000;
-}
-p{
-  color: #000000;
-}
-
+  
 .project {
-  width: calc(45% - 15px);
-  margin: 20px 10px;
-  background-color: #1d242b8c;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+    width: calc(47% - 20px);
+    margin: 10px; 
+    background-color: #f0f5f9; 
+    color: #2c3e50; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
-
+  
 .project:hover {
-  transform: translateY(-10px);
+    transform: scale(1.05);
 }
-
+  
 .mediaContainer {
-  border-radius: 15px;
-  /* overflow: hidden; */
-  margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
-
-.media-content {
-  width: 100%;
-  border-radius: 15px;
+  
+.mediaContent {
+    width: 100%;
+    border-radius: 10px;
 }
-
+  
 .repoLink {
-  font-size: 2rem;
-  color: #3498db;
-  transition: color 0.3s ease-in-out;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #2c3e50; 
+    transition: color 0.3s ease-in-out;
+}
+  
+.repoLink:hover {
+    color: #3498db;
 }
 
-.repo-link:hover {
-  color: #1590e1;
+h2{
+    display: flex;
+    justify-content: center;
 }
+  

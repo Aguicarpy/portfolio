@@ -1,103 +1,82 @@
 /* Header.module.css */
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* #hero{
+    min-height: 100vh;
+    position: relative;
+} */
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a8d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+
 .headerContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* width: 100%;
-  height: 120px; */
-  background: url('../../assets/backHeader.gif');
-  background-size: cover;
-  height: 100vh;
-  width: 100vh;
-  color: #fff;
-  padding: 1rem;
+  min-height: 100vh;
+  background: url('../../assets/Plexus_Wave_Background.mp4');
+  color: white;
+  /* padding: 40px; */
   text-align: center;
-  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.logoContainer {
-  flex-shrink: 0;
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  width: 80%;
 }
 
-.logo {
-  padding-left: 20px;
-  width: 80px;
-  height: auto;
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+  width: 80%;
 }
 
 .navigation {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
+    position: absolute;
+    bottom: 20px; /* Ajusta según sea necesario */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
 }
 
-.navigation a {
-  position: relative;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 1rem 1rem;
-  margin: 0.5rem;
-  background-color: transparent;
-  color: #7e65ff;
-  overflow: hidden;
-  border: none;
+.navItem {
+    color: white;
+    text-decoration: none;
+    margin: 0 1%; /* Ajustado el margen y el ancho */
+    font-size: 1.5rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.navigation a::before,
-.navigation a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.navigation a::before {
-  transform-origin: top left;
-  transform: scaleX(0);
-}
-
-.navigation a::after {
-  transform-origin: bottom right;
-  transform: scaleX(0);
-}
-
-.navigation a:hover::before,
-.navigation a:hover::after {
-  transform: scaleX(1);
-}
-
-.navigation a:hover {
-  color: #ff4081;
-}
-
-.navigation a:hover::before {
-  animation: moveBorderTop 0.5s forwards;
-}
-
-.navigation a:hover::after {
-  animation: moveBorderBottom 0.5s forwards;
-}
-
-@keyframes moveBorderTop {
-  to {
-    transform-origin: top left;
-    transform: scaleX(0);
-  }
-}
-
-@keyframes moveBorderBottom {
-  to {
-    transform-origin: bottom right;
-    transform: scaleX(0);
-  }
+.navItem:hover {
+  opacity: 1;
 }
