@@ -2,8 +2,13 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
+  padding: 0;
 }
 
+.app {
+  position: relative;
+  overflow: hidden;
+}
 .section {
   display: flex;
   align-items: center;
@@ -44,3 +49,4 @@ body {
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
