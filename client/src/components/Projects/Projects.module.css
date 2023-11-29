@@ -1,7 +1,5 @@
-/* Projects.module.css */
-
 .projectsContainer {
-    padding: 40px;
+    padding: 100px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -50,8 +48,20 @@
     color: #3498db;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
 }
   
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+    .projectsContainer {
+      padding: 40px;
+    }
+    .project {
+      width: calc(100% - 20px);
+    }
+}

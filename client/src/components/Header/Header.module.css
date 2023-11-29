@@ -1,14 +1,8 @@
-/* Header.module.css */
-
 body {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* #hero{
-    min-height: 100vh;
-    position: relative;
-} */
 video{
     position: absolute;
     top: 0;
@@ -60,23 +54,59 @@ video{
 
 .navigation {
     position: absolute;
-    bottom: 20px; /* Ajusta según sea necesario */
+    bottom: 20px; 
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 2;
 }
-
 .navItem {
-    color: white;
-    text-decoration: none;
-    margin: 0 1%; /* Ajustado el margen y el ancho */
-    font-size: 1.5rem;
-    opacity: 0.8;
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
+  color: white;
+  text-decoration: none;
+  margin: 0 1%;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.navItem::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
 
 .navItem:hover {
   opacity: 1;
+}
+
+.navItem:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+  background-color: #3498db;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .navItem {
+    bottom: 55px;
+    margin: 0 3%;
+    font-size: 1.5rem;
+    font-size: 1rem;
+  }
 }
