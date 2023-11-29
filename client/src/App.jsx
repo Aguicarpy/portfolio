@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
@@ -10,11 +10,16 @@ import esTranslation from "./translations/es.json";
 import ptTranslation from "./translations/pt.json";
 
 function App() {
-  const [language, setLanguage] = useState("es");
-  const changeLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "es" ? "pt" : "es"));
-  };
+  const storedLanguage = localStorage.getItem("language");
+  const [language, setLanguage] = useState(storedLanguage || "es");
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
   const translations = language === "es" ? esTranslation : ptTranslation;
+  const changeLanguage = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+  };
 
   const selectVariants = {
     hidden: { opacity: 0, y: -20 },
