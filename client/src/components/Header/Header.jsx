@@ -1,9 +1,11 @@
-import React from "react";
+import {useState} from "react";
 import { motion } from "framer-motion";
 import styles from "./Header.module.css";
 import videoBack from "../../assets/Plexus_Wave_Background.mp4";
+import esTranslation from "../../translations/es.json"
+import ptTranslation from "../../translations/pt.json"
 
-const Header = () => {
+const Header = ({translations}) => {
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
@@ -43,7 +45,7 @@ const Header = () => {
         Carlos Aguilar
       </h1>
       <p className={styles.subtitle} variants={subtitleVariants}>
-        Desarrollador Web Fullstack
+        {translations.headerSubtitle}
       </p>
       <nav className={styles.navigation}>
         <a
@@ -51,28 +53,28 @@ const Header = () => {
           variants={navItemVariants}
           onClick={() => scrollToSection("sobre-mi")}
         >
-          Sobre mi
+          {translations.aboutMe}
         </a>
         <a
           className={styles.navItem}
           variants={navItemVariants}
           onClick={() => scrollToSection("proyectos")}
         >
-          Proyectos
+          {translations.projects}
         </a>
         <a
           className={styles.navItem}
           variants={navItemVariants}
           onClick={() => scrollToSection("habilidades")}
         >
-          Skills
+          {translations.skills}
         </a>
         <a
           className={styles.navItem}
           variants={navItemVariants}
           onClick={() => scrollToSection("contacto")}
         >
-          Contacto
+          {translations.contact}
         </a>
       </nav>
       <video muted autoPlay loop>

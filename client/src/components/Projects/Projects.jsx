@@ -1,10 +1,9 @@
 // Projects.js
-import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useInView } from 'react-intersection-observer';
 import loginIntra from "../../assets/project01/intranetLogin.png";
 import intra02 from "../../assets/project01/intranet02.png";
 import intra03 from "../../assets/project01/intranet03.png";
@@ -22,7 +21,7 @@ import patitas08 from "../../assets/project02/patitas08.png"
 import { FaGithub } from 'react-icons/fa';
 import styles from './Projects.module.css';
 
-const Projects = () => {
+const Projects = ({translations}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const projectsVariants = {
@@ -33,7 +32,7 @@ const Projects = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-      const projectsSection = document.getElementById('projectsSection'); // Asigna un ID a tu sección de proyectos
+      const projectsSection = document.getElementById('projectsSection');
 
       if (projectsSection && scrollPosition > projectsSection.offsetTop) {
         setIsVisible(true);
@@ -57,13 +56,13 @@ const Projects = () => {
   return (
     <motion.div
     id="projectsSection"
-    className={`${styles.projectsContainer} ${isVisible ? styles.visible : ''}`} // Asegúrate de aplicar las clases CSS aquí
+    className={`${styles.projectsContainer} ${isVisible ? styles.visible : ''}`}
     initial="hidden"
     animate={isVisible ? 'visible' : 'hidden'}
     variants={projectsVariants}
     transition={{ duration: 1.5, ease: 'easeOut' }}
     >
-      <h2>Proyectos Realizados</h2>
+      <h2>{translations.h2Projects}</h2>
       <div className={styles.projectsList}>
         <div className={styles.project}>
           <div className={styles.mediaContainer}>
@@ -77,7 +76,7 @@ const Projects = () => {
             </Slider>
           </div>
           <h3>Intranet</h3>
-          <p>Proyecto realizado con la finalidad de mejorar la cooperación entre los colaboradores, presenta varias funcionalidades hechas para facilitar interacción y comunicación entre funcionarios de varias sucursales.</p>
+          <p>{translations.pIntranet}</p>
           <a className={styles.repoLink} href="https://github.com/Aguicarpy/intranet_sulamerica" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
@@ -96,7 +95,7 @@ const Projects = () => {
             </Slider>
           </div>
           <h3>Patitas Sin Hogar</h3>
-          <p>Proyecto realizado con un enfoque social a la adopción de mascotas en situación de busca de un hogar. La página ayuda al usuario u organización a dar en adopción a la mascota, para que un usuario adoptante pueda dar un hogar a la mascota.</p>
+          <p>{translations.pPatitas}</p>
           <a className={styles.repoLink} href="https://github.com/RieraAndres/Henry_PF" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>

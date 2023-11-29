@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import javascriptImage from "../../assets/technologies/JavaScript.png"
@@ -37,7 +37,7 @@ const Skills = () => {
       transition={{ duration: 1.5, ease: 'easeOut' }}
       ref={ref}
     >
-      <h2>Habilidades</h2>
+      <h2>Tecnologías</h2>
       <div className={styles.skillGrid}>
         <div className={styles.skillItem}>
           <img className={styles.skillImage} src={javascriptImage} alt="JavaScript" />

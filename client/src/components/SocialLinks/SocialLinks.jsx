@@ -1,18 +1,33 @@
-// SocialLinks.js
 import React from 'react';
-import styles from './SocialLinks.module.css';  // Importa el módulo CSS
+import styled from 'styled-components';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
+const SocialLinksContainer = styled.div`
+  text-align: center;
+  margin-top: 200px; /* Ajusté el margen superior */
+`;
+
+const SocialLink = styled.a`
+  margin: 0 15px;
+  font-size: 32px;
+  color: #2c3e50;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #3498db;
+  }
+`;
 
 const SocialLinks = () => {
   return (
-    <div className={styles.socialLinksContainer}>
-      <a href="https://www.linkedin.com/in/aguicarpy/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+    <SocialLinksContainer>
+      <SocialLink href="https://www.linkedin.com/in/aguicarpy/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin />
-      </a>
-      <a href="https://github.com/Aguicarpy" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+      </SocialLink>
+      <SocialLink href="https://github.com/Aguicarpy" target="_blank" rel="noopener noreferrer">
         <FaGithub />
-      </a>
-    </div>
+      </SocialLink>
+    </SocialLinksContainer>
   );
 };
 
