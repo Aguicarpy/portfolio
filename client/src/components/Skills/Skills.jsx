@@ -8,6 +8,9 @@ import postgreSQLImage from "../../assets/technologies/postgres.png"
 import reactImage from "../../assets/technologies/react.png"
 import reduxImage from "../../assets/technologies/redux.png"
 import sequelizeImage from "../../assets/technologies/sequelize.png"
+import javaImage from "../../assets/technologies/java.png"
+import springImage from "../../assets/technologies/spring.png"
+import azureImage from "../../assets/technologies/azureCloud.png"
 import styles from './Skills.module.css';
 
 const Skills = () => {
@@ -66,6 +69,18 @@ const Skills = () => {
         <div className={styles.skillItem}>
           <img className={styles.skillImage} src={reduxImage} alt="redux" />
           <p>Redux</p>
+        </div>
+        <div className={styles.skillItem}>
+          <img className={styles.skillImage} src={javaImage} alt="redux" />
+          <p>Java</p>
+        </div>
+        <div className={styles.skillItem}>
+          <img className={styles.skillImage} src={springImage} alt="redux" />
+          <p>SpringBoot</p>
+        </div>
+        <div className={styles.skillItem}>
+          <img className={styles.skillImage} src={azureImage} alt="redux" />
+          <p>Azure</p>
         </div>
       </div>
     </motion.section>
