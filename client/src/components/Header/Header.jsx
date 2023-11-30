@@ -1,9 +1,7 @@
-import {useState} from "react";
 import { motion } from "framer-motion";
 import styles from "./Header.module.css";
 import videoBack from "../../assets/Plexus_Wave_Background.mp4";
-import esTranslation from "../../translations/es.json"
-import ptTranslation from "../../translations/pt.json"
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Header = ({translations}) => {
   const headerVariants = {
@@ -69,14 +67,10 @@ const Header = ({translations}) => {
         >
           {translations.skills}
         </a>
-        <a
-          className={styles.navItem}
-          variants={navItemVariants}
-          onClick={() => scrollToSection("contacto")}
-        >
-          {translations.contact}
-        </a>
       </nav>
+      <div className={styles.socialLinks}>
+        <SocialLinks />
+      </div>
       <video muted autoPlay loop>
         <source src={videoBack} type="video/mp4"></source>
       </video>

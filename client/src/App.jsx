@@ -11,12 +11,12 @@ import ptTranslation from "./translations/pt.json";
 
 function App() {
   const storedLanguage = localStorage.getItem("language");
-  const [language, setLanguage] = useState(storedLanguage || "es");
+  const [language, setLanguage] = useState(storedLanguage || "ES");
   useEffect(() => {
     localStorage.setItem("language", language);
   }, [language]);
 
-  const translations = language === "es" ? esTranslation : ptTranslation;
+  const translations = language === "ES" ? esTranslation : ptTranslation;
   const changeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
@@ -39,8 +39,8 @@ function App() {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <select value={language} onChange={(e) => changeLanguage(e.target.value)}>
-          <option value="es">Español</option>
-          <option value="pt">Portugués</option>
+          <option value="ES">Español</option>
+          <option value="PT">Portugués</option>
         </select>
       </motion.div>
       <div id="sobre-mi">
@@ -52,8 +52,8 @@ function App() {
       <div id="habilidades">
         <Skills />
       </div>
-      <div id="contacto">
-        <SocialLinks />
+      <div>
+        <SocialLinks language={language} />
       </div>
     </div>
   );

@@ -31,6 +31,7 @@ video{
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 
@@ -41,6 +42,14 @@ video{
   position: relative;
   z-index: 2;
   width: 80%;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: #3498db;
+  transform: scale(1.05);
 }
 
 .subtitle {
@@ -50,16 +59,27 @@ video{
   position: relative;
   z-index: 2;
   width: 80%;
+  color: #ffffff;
+  background: linear-gradient(to right, #1a1a8d, #3498db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 0.3s ease-in-out, background-position 0.3s ease-in-out;
 }
 
-.navigation {
-    position: absolute;
-    bottom: 20px; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 2;
+.subtitle:hover {
+  background-position: 100%;
 }
+
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
 .navItem {
   color: white;
   text-decoration: none;
@@ -69,6 +89,7 @@ video{
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   position: relative;
+  z-index: 2;
 }
 
 .navItem::before {
@@ -106,7 +127,9 @@ video{
   .navItem {
     bottom: 55px;
     margin: 0 3%;
-    font-size: 1.5rem;
     font-size: 1rem;
+    position: relative;
+    z-index: 2;
   }
+
 }
