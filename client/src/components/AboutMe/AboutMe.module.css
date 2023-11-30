@@ -23,9 +23,9 @@
 
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 .sobreMiContainer {
   padding: 20px;
 }
@@ -41,5 +41,6 @@
 
 .sobreMiContainer p {
   font-size: 14px;
+  margin-left: 23px;
 }
 }

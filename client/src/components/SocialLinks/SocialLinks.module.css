@@ -1,15 +1,31 @@
-.socialLinksContainer {
-  text-align: center;
-  margin-top: 20px;
+.SocialLinksContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 40%;
+  z-index: 1000;
+  opacity: 0;
+}
+.SocialLinksContainer.visible {
+  opacity: 1;
 }
 
-.socialLink {
-  margin: 0 10px;
-  font-size: 24px;
+.SocialLink {
+  margin: 5px 5px;
+  font-size: 32px;
   color: #2c3e50;
   transition: color 0.3s ease-in-out;
+}
 
-  &:hover {
-    color: #3498db; 
+.SocialLink:hover {
+  color: #3498db;
+}
+
+@media screen and (max-width: 768px) {
+  .SocialLinksContainer {
+    text-align: left;
+    margin-top: 10px;
+    left: -1px;
   }
 }
