@@ -8,15 +8,22 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import "./App.css";
 import esTranslation from "./translations/es.json";
 import ptTranslation from "./translations/pt.json";
+import enTranslation from "./translations/en.json";
 
 function App() {
   const storedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(storedLanguage || "ES");
+  console.log(language);
   useEffect(() => {
     localStorage.setItem("language", language);
   }, [language]);
 
-  const translations = language === "ES" ? esTranslation : ptTranslation;
+  const translations = {
+    ES: esTranslation,
+    PT: ptTranslation,
+    EN: enTranslation,
+  };
+
   const changeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
@@ -29,7 +36,7 @@ function App() {
   return (
     <div className="app">
       <div id="cabecera" style={{ position: "relative", zIndex: 1 }}>
-        <Header translations={translations} />
+        <Header translations={translations[language]} />
       </div>
       <motion.div
         className="selectContainer"
@@ -41,16 +48,17 @@ function App() {
         <select value={language} onChange={(e) => changeLanguage(e.target.value)}>
           <option value="ES">Español</option>
           <option value="PT">Portugués</option>
+          <option value="EN">English</option>
         </select>
       </motion.div>
       <div id="sobre-mi">
-        <AboutMe translations={translations} />
+        <AboutMe translations={translations[language]} />
       </div>
       <div id="proyectos">
-        <Projects translations={translations} />
+        <Projects translations={translations[language]} />
       </div>
       <div id="habilidades">
-        <Skills />
+        <Skills translations={translations[language]}/>
       </div>
       <div>
         <SocialLinks language={language} />

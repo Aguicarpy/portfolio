@@ -1,0 +1,13 @@
+{
+    "headerSubtitle":"Fullstack Developer",
+    "aboutMe": "AboutMe",
+    "projects": "Projects",
+    "skills": "Technologies",
+    "contact": "Contact",
+    "p1AboutMe":"Hello, and welcome to my portfolio! I'm Carlos Aguilar, a passionate web developer with expertise in cutting-edge technologies to improve scalability and adaptability. I love to create web applications that are not only functional and secure, but also attractive and easy to use.",
+    "p2AboutMe":"During my career, I have worked on several projects that have enhanced my skills in software development. I am constantly learning and looking for new challenges to add value and grow professionally.",
+    "h2Projects":"Projects Completed",
+    "pIntranet":"A project designed to improve cooperation among employees, it presents several functionalities designed to facilitate interaction and communication between employees from different branches.",
+    "pPatitas":"This project was created with a social approach to the adoption of pets looking for a home. The page helps the user or organization to give the pet for adoption, so that an adopter user can give a home to the pet.",
+    "skillsh2":"Technologies"
+}
