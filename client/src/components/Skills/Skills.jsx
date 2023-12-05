@@ -13,7 +13,7 @@ import springImage from "../../assets/technologies/spring.png"
 import azureImage from "../../assets/technologies/azureCloud.png"
 import styles from './Skills.module.css';
 
-const Skills = () => {
+const Skills = ({translations}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -40,7 +40,7 @@ const Skills = () => {
       transition={{ duration: 1.5, ease: 'easeOut' }}
       ref={ref}
     >
-      <h2>Tecnologías</h2>
+      <h2>{translations.skillsh2}</h2>
       <div className={styles.skillGrid}>
         <div className={styles.skillItem}>
           <img className={styles.skillImage} src={javascriptImage} alt="JavaScript" />
