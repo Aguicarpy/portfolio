@@ -46,9 +46,9 @@ function App() {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <select value={language} onChange={(e) => changeLanguage(e.target.value)}>
-          <option value="ES">Español</option>
-          <option value="PT">Portugués</option>
-          <option value="EN">English</option>
+          <option value="ES">{translations[language].languageES}</option>
+          <option value="PT">{translations[language].languagePT}</option>
+          <option value="EN">{translations[language].languageEN}</option>
         </select>
       </motion.div>
       <div id="sobre-mi">
