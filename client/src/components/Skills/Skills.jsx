@@ -9,6 +9,8 @@ import reactImage from "../../assets/technologies/react.png"
 import reduxImage from "../../assets/technologies/redux.png"
 import sequelizeImage from "../../assets/technologies/sequelize.png"
 import azureImage from "../../assets/technologies/azureCloud.png"
+import typescriptImage from "../../assets/technologies/typescript.png"
+import nestImage from "../../assets/technologies/nest.png"
 import styles from './Skills.module.css';
 
 const Skills = ({translations}) => {
@@ -41,16 +43,24 @@ const Skills = ({translations}) => {
       <h2>{translations.skillsh2}</h2>
       <div className={styles.skillGrid}>
         <div className={styles.skillItem}>
-          <img className={styles.skillImage} src={javascriptImage} alt="JavaScript" />
+          <img className={styles.skillImage} src={javascriptImage} alt="javaScript" />
           <p>JavaScript</p>
         </div>
         <div className={styles.skillItem}>
-          <img className={styles.skillImage} src={nodejsImage} alt="Node.js" />
-          <p>Node.js</p>
+          <img className={styles.skillImage} src={typescriptImage} alt="typescript" />
+          <p>Typescript</p>
+        </div>
+        <div className={styles.skillItem}>
+          <img className={styles.skillImage} src={nodejsImage} alt="node.js" />
+          <p>Node</p>
+        </div>
+        <div className={styles.skillItem}>
+          <img className={styles.skillImage} src={nestImage} alt="nest" />
+          <p>Nest</p>
         </div>
         <div className={styles.skillItem}>
           <img className={styles.skillImage} src={expressjsImage} alt="express.js" />
-          <p>Express.js</p>
+          <p>Express</p>
         </div>
         <div className={styles.skillItem}>
           <img className={styles.skillImage} src={sequelizeImage} alt="sequelizeORM" />
@@ -69,7 +79,7 @@ const Skills = ({translations}) => {
           <p>Redux</p>
         </div>
         <div className={styles.skillItem}>
-          <img className={styles.skillImage} src={azureImage} alt="redux" />
+          <img className={styles.skillImage} src={azureImage} alt="azure" />
           <p>Azure</p>
         </div>
       </div>

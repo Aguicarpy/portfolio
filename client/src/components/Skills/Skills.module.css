@@ -30,7 +30,7 @@
     left: -100px;
     right: -100px;
     bottom: -100px;
-    background: radial-gradient(circle, #3498db 0%, rgba(52, 152, 219, 0) 70%);
+    background: radial-gradient(circle, #3498db 0%, rgba(219, 127, 52, 0) 70%);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
@@ -46,8 +46,8 @@
 }
   
 .skillImage {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     transition: filter 0.3s ease-in-out;
 }
   
